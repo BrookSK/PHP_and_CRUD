@@ -1,0 +1,109 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Cadastro de Produtos</title>
+	<style type="text/css">
+		label{
+			font-size: 17px;
+			font-weight: bold;
+			color: #1B329C;
+		}
+		.texto{
+			background-color: azure;
+			color:#4D2021;
+			font-size: 15px;
+		}
+		.botao{
+			background-color:#5761C9;
+			color:#DFDFDF;
+			font-size: 15px;
+			left: 170px;
+			position: relative;
+		}
+		#principal{
+			background-color:#E2FBFF;
+			width: 500px;
+			height: 400px;left: 30%;
+			position: relative;
+		}
+	</style>
+	
+	<script language="javascript">
+		function verifica(){
+			n=cad.nome.value;//receber dado da caixa de texto
+			//window.alert("NOME: "+n)
+			
+			//objeto marca produto
+			i=cad.marca.selectedIndex;//atribui a posição selecionada
+			ma=cad.marca.options[i].value;//capturando o valor das posições marcadas
+			//window.alert("MARCA: "+ma);
+			
+			//objeto modelo do produto
+			mo=cad.modelo.value;//recebe o modelo digitado
+			//window.alert("MODELO: "+mo);
+			
+			nu="";
+			if(cad.numero[0].checked==1){
+				nu=nu+cad.numero[0].value;
+			}
+			if(cad.numero[1].checked==1){
+				nu=nu+cad.numero[1].value;
+			}
+			if(cad.numero[2].checked==1){
+				nu=nu+cad.numero[2].value;
+			}
+			if(cad.numero[3].checked==1){
+				nu=nu+cad.numero[3].value;
+			}
+			if(cad.numero[4].checked==1){
+				nu=nu+cad.numero[4].value;
+			}
+			if(cad.numero[5].checked==1){
+				nu=nu+cad.numero[5].value;
+			}
+			//window.alert("NUMERAÇÃO: "+nu);
+			
+			//objeto preço do produto
+			pre=cad.preco.value;
+			//Window.alert("PREÇO: "+pre)
+			
+			resp=window.confirm("Você confirma o cadastro dos dados:\nNOME: "+n+"\nMARCA: "+ma+"\nMODELO: "+mo+"\nNUMERAÇÃO: "+nu+"\nPREÇO: "+pre);
+			
+			if(resp==true){
+				window.alert("Dados cadastrados.");
+			}else{
+				window.alert("Dados não cadastrados.");
+			}
+		}
+	</script>
+</head>
+
+<body>
+	<div id="principal">
+		<h1>Cadastro de Produtos</h1>
+	
+		<form name="cad" id="cad" action="" method="post">
+		<label>Nome: </label><input type="text" class="texto" name="nome" id="nome" size="30" maxlength="30"><br><br>
+		<label>Marca: </label>
+			<select class="texto" name="marca" id="marca">
+				<option selected> </option>
+				<option value="N">Nike</option>
+				<option value="A">Adidas</option>
+				<option value="M">Mizuno</option>
+			</select><br><br>
+		<label>Modelo: </label><input type="text" class="texto" name="modelo" id="modelo" size="20" maxlength="20"><br><br>
+		<label>Númeração: </label>
+			<input type="checkbox" name="numero" id="numero35" value=" 35 " tabindex="0"><label>35</label>
+			<input type="checkbox" name="numero" id="numero36" value=" 36 " tabindex="1"><label>36</label>
+			<input type="checkbox" name="numero" id="numero37" value=" 37 " tabindex="2"><label>37</label>
+			<input type="checkbox" name="numero" id="numero38" value=" 38 " tabindex="3"><label>38</label>
+			<input type="checkbox" name="numero" id="numero39" value=" 39 " tabindex="4"><label>39</label>
+			<input type="checkbox" name="numero" id="numero40" value=" 40 " tabindex="5"><label>40</label><br><br>
+			<label>Preço: </label><input type="number" name="preco" id="preco" min="30" max="2000" step="0.10"><br><br>
+			<input type="submit" class="botao" name="submit" id="submit" value="Enviar" onClick="verifica()">
+			<input type="reset" class="botao" name="reset" id="reset" value="Limpar">
+		</form>
+	</div>
+</body>
+</html>

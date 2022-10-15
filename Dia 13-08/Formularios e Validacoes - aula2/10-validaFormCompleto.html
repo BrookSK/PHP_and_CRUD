@@ -1,0 +1,140 @@
+﻿<!doctype html>
+<html>
+  <head>
+  	<meta charset="utf-8">
+    <title> Trabalhando com Formulários </title>
+    <script language="javascript">
+	function confirmarCadastro(){
+		<!-- testando caixa de texto -->
+		if(document.getElementById("txtNome").value =="" ){
+			
+			alert("Digite seu nome");
+			return false;
+		 }
+			
+		<!-- testando opção de radio -->
+		if(document.getElementById("rdbPeriodo1").checked==false &&
+	       document.getElementById("rdbPeriodo2").checked==false &&
+	       document.getElementById("rdbPeriodo3").checked==false) {
+		   alert("Escolha um período");
+		   return false;
+	   }
+	       
+		
+		
+		<!-- testando opção de checkbox -->
+		 var check, qteCheck, i, qteSelecionado=0;
+	     check = document.getElementsByName("chkLinguagem");
+	     qteCheck=check.length;
+	     for(i=0;i<qteCheck; i++){
+           if(check[i].checked)  
+              qteSelecionado++;  
+	    }
+
+        if (qteSelecionado==0){
+        	alert("Escolha pelo menos uma linguagem");
+        	return false;
+        }
+
+      
+		
+		<!-- testando opção select -->				
+		
+		 var combo;
+         combo=document.getElementById("sltCidade")	;
+         if(combo.selectedIndex==0){
+           alert("Indique cidade de origem");
+		  return false;
+		}
+		
+		
+				
+				
+		<!-- testando opção textarea -->						
+		if(document.getElementById("txtOpiniao").value=="")
+			{
+			alert("Opinião obrigatoria");
+			return false;
+			}
+		
+		
+		
+		<!-- verificando e-mail -->				
+		
+		
+		var email = document.getElementById("txtEmail").value;
+		if (email.indexOf('@') == -1 ||
+			email.indexOf('.') == -1 ||
+			email.length<10){
+			
+			alert("E-mail Inválido !!");
+			return false;
+		}
+	
+	
+		<!-- Retorna verdadeiro caso todos os testes sejam satisfatórios -->								
+		return	true; 
+	}
+  </script>
+ </head>
+ <body>
+	<h2> Formulário para cadastro </h2>
+	<form name="frmCadastro"  method="post">
+	Digite seu nome: 
+	<input type="text" name="txtNome" id="txtNome"> <br>
+	
+
+	  <p>Escolha o horário do curso que deseja cursar:<br>
+		   <input type="radio" name="rdbPeriodo" id="rdbPeriodo1" value="manha">
+		    Manhã<br>
+	       <input type="radio" name="rdbPeriodo"  id="rdbPeriodo2"value="tarde">
+		    Tarde <br>
+	      <input type="radio" name="rdbPeriodo"  id="rdbPeriodo3" value="noite">
+		   Noite 
+	    </p>	 
+	  
+	  <p>
+	     Linguagens  que você domina: <br>
+	      <input type="checkbox" name="chkLinguagem" value="JavaScript">
+	       JavaScript<br>
+	      <input type="checkbox" name="chkLinguagem" value="C++" id="chkLinguagem2">
+	       C++ <br>
+	      <input type="checkbox" name="chkLinguagem" value="PHP" id="chkLinguagem3">
+	       PHP <br>
+	      <input type="checkbox" name="chkLinguagem" value="Java" id="chkLinguagem4">
+	       Java <br>
+	      <input type="checkbox" name="chkLinguagem" value="C#" id="chkLinguagem5">
+	      C# <br>
+	 </p>
+	 
+	  <p>Cidade de origem:<br>
+		<select name="sltCidade" id="sltCidade">
+		  <option value=""> - - - cidade - - - </option>
+		  <option value="Campinas"> Campinas </option>
+		  <option value="São Paulo"> São Paulo </option>
+		  <option value="Rio de Janeiro" > Rio e Janeiro </option>
+		</select>
+	  </p>	
+	
+	
+	  <p>Opinião:<br>
+	    <textarea name="txtOpiniao" id="txtOpiniao"  rows="6" cols="40"></textarea>
+	  </p>
+	  
+	  <p>E-mail:<br>
+	    <input type="text" name="txtEmail" id="txtEmail"><br><br>
+	  </p>
+	 
+
+	 <input type="submit" value="Enviar" onclick="return confirmarCadastro()">
+	 <input type="reset" value="Limpar">
+	 
+	</form>
+ </body>
+</html>
+
+
+
+
+
+

@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>for 2</title>
+	<script language="javascript">
+  
+  /* Faça um programa em JavaScript que solicite a idade de 15 pessoas 
+     calcule e exiba
+    porcentagem de pessoas que possuem de 1 até 50 anos
+    porcentagem de pessoas que possuem acima de 50 anos
+	usar  for */
+	
+	var id,cont, qteAte50=0, qteMais50=0, porcAte50=0, porcMais50=0;
+	
+	for(cont=0; cont<5;cont++){
+	
+	  id=window.prompt("Digite sua idade");
+	  id=parseInt(id);
+	  
+	  if (id>=1 && id<=50){
+	   qteAte50++;
+	  }else {
+	    qteMais50++;
+	  }
+      
+    
+  }
+  
+   porcAte50= (qteAte50/15)*100;
+   porMais50= (qteMais50/15)*100;
+   
+   alert("Porcentagem de pessoas de 1 até 50 anos " + porcAte50 +" % "+
+	      "\nPorcentagem de pessoas acima de 50anos " + porMais50 + " % ");
+
+
+
+  
+  
+  
+  
+  
+  </script>
+</head>
+<body>
+</body>
+</html>

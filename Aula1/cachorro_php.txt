@@ -1,0 +1,45 @@
+<?php
+require_once 'Pessoa.php';
+
+class Cachorro{
+	/**
+	 * 
+	 * @var string
+	 */
+	private $nome;
+	
+	/**
+	 * 
+	 * @var Pessoa
+	 */
+	private $dono;
+	
+	/**
+	 * @return string
+	 */
+	public function getNome() {
+		return $this->nome;
+	}
+
+	/**
+	 * @return Pessoa
+	 */
+	public function getDono() {
+		return $this->dono;
+	}
+
+	/**
+	 * @param string $nome
+	 */
+	public function setNome($nome) {
+		$this->nome = $nome;
+	}
+
+	/**
+	 * @param Pessoa $dono
+	 */
+	public function setDono(Pessoa $dono) {
+		$this->dono = $dono;
+	}
+	
+}

@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title> confirm3-do-while</title>
+	<script language="javascript">
+  
+		/* Faça um programa em JavaScript que solicite
+		a idade de uma pessoa e usando confirm pergunte se existe 
+		outra idade a ser digitada. Calcule a media de idade digitada.
+		Finalizar somente quando
+		não quiser cadastrar mais e exibir a media de idades */
+		
+
+        var
+		i, idades=0, cont=0,resp;
+		   
+		   do{
+			 i=window.prompt("Digite a idade da pessoa");
+			 i=parseInt(i);
+		     idades=idades+i;	
+             cont++;			 
+		   
+			resp= window.confirm("Deseja cadastrar outra idade? ");
+		   }while(resp==true);
+		   
+		   media=idades/cont;
+
+		   alert("Média de idades cadastradas:" + media);
+
+ </script>
+ </head>
+
+<body>
+</body>
+</html>

@@ -1,0 +1,106 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Documento sem título</title>
+	<script language="javascript">
+		function v1(){
+			if(form1.nome.value==""){
+				
+				window.alert("Nome não informado.");
+			}
+		}
+		
+		function v2(){
+			
+			i=form1.idade.value;//pega idade
+			
+			if(i<1){
+				c="Peixe Palhaço";
+				f="palhaco.jpg";
+			}
+			if(i>=1 && i<=2){
+				c="Peixe Beta";
+				f="beta.jpg";
+			}
+			if(i>=3 && i<=6){
+			    c="Peixe Espada";
+				f="espada.jpg";
+			}
+			if(i>=7 && i<=12){
+			    c="Golfinho";
+				f="golfinho.jpg"
+			}
+			if(i>=13 && i<=18){
+			    c="Tubarão Martelo";
+				f="martelo.jpg";
+			}
+			if(i>18){
+			    c="Tubarão Branco";
+				f="branco.jpg";
+			}
+			
+			form1.classe.value=c;//exibindo a classisficação dentro do objeto classe
+			foto.src=f;//atribuição de imagem de acordo com a classificação
+			
+		}
+		
+		function v3(){
+			
+			n=form1.nome.value;
+			i=form1.idade.value;
+			cla=form1.classe.value;
+			t=form1.tel.value;
+			e=form1.email.value;
+			
+			resp=window.confirm("Deseja enviar os dados?");
+			
+			if(resp==true){
+				//form1.action="nome.php"; // para enviar para o PHP //
+				
+				document.write("<table border=1>");
+				document.write("<tr><td>NOME:</td><td>"+n+"</td></tr>");
+				document.write("<tr><td>IDADE:</td><td>"+i+"</td></tr>");
+				document.write("<tr><td>CLASSIFICAÇÃO:</td><td>"+cla+"</td></tr>");
+				document.write("<tr><td>TELEFONE:</td><td>"+t+"</td></tr>");
+				document.write("<tr><td>E-MAIL:</td><td>"+e+"</td></tr>");
+				document.write("</table>");
+			}
+			
+		}
+	</script>
+</head>
+
+<body>
+	<p>Formulário de Interesse em aulas de natação</p>
+	<form id="form1" name="form1" method="post" onSubmit="v3()">
+	<p>
+		<label for="nome">Nome do Aluno:</label>
+		<input name="nome" type="text" autofocus="autofocus" id="nome" size="30" maxlength="30" onBlur="v1()">
+	</p>
+	<p>
+		<label for="idade">Idade:</label>
+		<input name="idade" type="number" required="required" id="idade" max="120" min="0" step="1" onChange="v2()">
+	</p>
+	<p>
+		<label for="classe">Classificação:</label>
+		<input name="classe" type="text" disabled="disabled" id="classe" size="20" maxlength="20">
+	</p>
+	<p>
+	  <img src="" name="foto" id="foto" width="400"></p>
+	<p>
+	  <label for="tel">Telefone Celular:</label>
+	  <input name="tel" type="tel" required="required" id="tel" placeholder="(99)99999-9999" pattern="\([0-9]{2}\)[0-9]{4,5}-[0-9]{4}">
+    </p>
+	<p>
+	  <label for="email">Email:</label>
+      <input type="email" name="email" id="email">
+	</p>
+	<p>
+	  <input type="submit" name="submit" id="submit" value="Enviar">
+	  <input type="reset" name="reset" id="reset" value="Redefinir">
+	</p>
+	</form>
+<p>&nbsp;</p>
+</body>
+</html>

@@ -1,0 +1,52 @@
+//POPO - plain old php objects
+//POJO - Plain Old Java Objects
+//MVC - Model, View & Controller
+
+<?php
+class Pessoa {
+	private $nome;
+	private $sobrenome;
+	private $idade;
+	
+	/**
+	 * @return string
+	 */
+	public function getNome() {
+		return $this->nome;
+	}
+	
+	/**
+	 * @return string
+	 */
+	public function getSobrenome() {
+		return $this->sobrenome;
+	}
+	
+	/**
+	 * @return int
+	 */
+	public function getIdade() {
+		return $this->idade;
+	}
+	
+	/**
+	 * @param string $nome
+	 */
+	public function setNome(string $nome) {
+		$this->nome = $nome;
+	}
+	
+	/**
+	 * @param string $sobrenome
+	 */
+	public function setSobrenome(string $sobrenome) {
+		$this->sobrenome = $sobrenome;
+	}
+	
+	/**
+	 * @param int $idade
+	 */
+	public function setIdade(int $idade) {
+		$this->idade = $idade;
+	}	
+}

@@ -1,0 +1,187 @@
+@charset "utf-8";
+/* CSS Document */
+h1{
+	font-size: 42px;
+	color: #A00003;
+	text-align: center;
+}
+
+p{
+	text-align: justify;
+	font-size: 20px;
+	color: #0A7E22
+}
+.meup{
+	color: #141A96;
+	font-weight: bold; /*negrito*/
+}
+
+img{
+	width: 235px;
+	margin-left: 40%;
+	margin-right: 25%;
+}
+
+body{
+	background-color: #FFE9A9;
+}
+
+li{
+	font-size: 20px;
+	color:#500078;
+	padding-bottom: 5%; /*espaçamento entre itens*/
+	line-height: 120%; /*espaçamento entre linhas e começa n 100%*/
+	margin-left: 30%;
+	margin-right: 30%;
+	
+}
+/*Formatação da divs*/
+
+.divmae{
+	width: 60%;
+	height: 450px;
+	background-color: burlywood;
+	margin-left: 20%;
+	margin-top: 25px;
+	
+}
+
+#div1{
+	width: 45%;
+	height: 400px;
+	background-color: darkseagreen;
+	position: relative;
+	float: right;
+	right: 3%;
+	top: 5%;
+}
+
+#div2{
+	width: 45%;
+	height: 400px;
+	background-color: indianred;
+	position: relative;
+	left: 3%;
+	top: 5%;
+}
+
+.imagemarte{
+	margin-left: 6%;
+	margin-top: 30%;
+	
+}
+
+.textoarte{
+	font-size: 19px;
+	color: darkred;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+h3{
+	font-size: 21px;
+	text-align: center;
+}
+
+#div3{
+	width: 45%;
+	height: 400px;
+	background-color: turquoise;
+	position: relative;
+	float: right;
+	right: 3%;
+	top: 5%;
+}
+
+#div4{
+	width: 45%;
+	height: 400px;
+	background-color: violet;
+	position: relative;
+	left: 3%;
+	top: 5%;
+}
+
+#div5{
+	width: 45%;
+	height: 400px;
+	background-color:#536CE4;
+	position: relative;
+	float: right;
+	right: 3%;
+	top: 5%;
+}
+
+#div6{
+	width: 45%;
+	height: 400px;
+	background-color:#E7797B;
+	position: relative;
+	left: 3%;
+	top: 5%;
+}
+
+#div7{
+	width: 45%;
+	height: 500px;
+	background-color:#A6CB44;
+	position: relative;
+	float: right;
+	right: 3%;
+	top: 5%;
+}
+
+#div8{
+	width: 45%;
+	height: 500px;
+	background-color:#E5C57F;
+	position: relative;
+	left: 3%;
+	top: 5%;
+}
+
+#divD{
+	height: 550px;
+}
+
+#div9{
+	width: 45%;
+	height: 400px;
+	background-color:#2B8E70;
+	position: relative;
+	float: right;
+	right: 3%;
+	top: 5%;
+}
+
+#div10{
+	width: 45%;
+	height: 400px;
+	background-color:#90482C;
+	position: relative;
+	left: 3%;
+	top: 5%;
+}
+
+#div11{
+	width: 45%;
+	height: 600px;
+	background-color:#8E9702;
+	position: relative;
+	float: right;
+	right: 3%;
+	top: 5%;
+}
+
+#div12{
+	width: 45%;
+	height: 600px;
+	background-color:#D33F68;
+	position: relative;
+	left: 3%;
+	top: 5%;
+}
+
+#divF{
+	height: 650px;
+}

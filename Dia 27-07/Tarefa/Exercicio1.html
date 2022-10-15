@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Ex1</title>
+	
+
+</head>
+<body>
+   <script language="javascript">
+	
+    var val, cod, dif, num;
+
+    val=window.prompt("Digite o valor de um produto: ");
+    val=parseFloat(val);
+    cod=window.prompt("Digite o cod para gerar um aumento (1, 3, 4, 8): ");
+    cod=parseInt(cod);
+
+    switch(cod){
+      case 1:
+        num=(0.15*val)+val;
+        num=parseFloat(num);
+        dif=num-val;
+      break;
+      case 3:
+        num=(0.20*val)+val;
+        num=parseFloat(num);
+        dif=num-val;
+      break;
+      case 4:
+        num=(0.35*val)+val;
+        num=parseFloat(num);
+        dif=num-val;
+      break;
+      case 8:
+        num=(0.40*val)+val;
+        num=parseFloat(num);
+        dif=num-val;
+      break;
+      default:
+        alert('Valor invalido')
+    }
+    alert("O valor digitado foi: "+val+"\nO codido digitado foi: "+cod+"\nO valor reajustado foi: "+num+"\nA diferencas dos valores: "+dif);
+   </script>
+  
+</body>
+</html>

@@ -1,0 +1,39 @@
+{% extends "modeloPadrao.html" %}
+
+{% block titulo %} Tela de login {% endblock %} 
+{% block conteudo %} 
+
+	<p>{{mensagem}}</p>
+
+    <form action="index.php">
+        <label for="Login">Login:</label>
+       	<input type="text" name="Login">
+       	
+       	<label for="Senha">Senha:</label>
+   	 	<input type="text" name="Senha">
+   	 	
+   	 	<br><br>  	 	
+  	 	
+ 	  	<select>
+  	   		{% for minhaChave, meuValor in valoresFornecidos %} 
+  	   		<option value="{{minhaChave}}">{{meuValor}}</option>
+  	   		{% endfor %}
+  	   	</select>
+  	   	
+  	   	<br><br>
+  	   	
+  	   	<input type="submit" name="envia">
+  	   	
+    </form>
+    
+    <h1>Lista de personalidades importantes</h1>
+    <ul>
+	    {% for personalidade in listaDePersonalidades %}
+	    	<li>
+	    	{{ personalidade.cod }} .
+	    	{{ personalidade.nome }}
+	    	{{ personalidade.sobrenome }}
+	    	</li>
+	    {% endfor %}
+    </ul>    
+{% endblock %}

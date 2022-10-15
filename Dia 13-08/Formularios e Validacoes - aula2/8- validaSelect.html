@@ -1,0 +1,38 @@
+﻿<!doctype html>
+<html>
+  <head>
+  	<meta charset="utf-8">
+    <title> Trabalhando com Formulários </title>
+    <script language="javascript">
+	 function confirmarCidade(){
+				
+         var combo;
+         combo=document.getElementById("sltCidade")	;
+         if(combo.selectedIndex==0){
+           alert("Indique cidade de origem");
+		  return false;
+
+         }
+        return true;	
+	}
+
+</script>
+</head>
+<body>
+	<h2> Formulário para cadastro </h2>
+	<form name="frmCidade"  method="post">
+		Cidade de origem:<br> 
+		<select name="sltCidade" id="sltCidade">
+			<option value=""> - - - cidade - - -	</option>
+			<option value="Campinas"> Campinas			</option>
+			<option value="São Paulo"> São Paulo			</option>
+			<option value="Rio de Janeiro"> Rio de Janeiro      </option>
+		</select>
+		<br>
+		<input type="submit" value="Enviar" onclick="return confirmarCidade()">
+	</form>
+</body>
+</html>
+
+
+

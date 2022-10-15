@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Ex2</title>
+	
+
+</head>
+<body>
+   <script language="javascript">
+	
+    var qtde, cod, preco;
+
+    cod=window.prompt("Digite o cod de um lanche (100, 101, 102, 103, 104): ");
+    cod=parseInt(cod);
+
+    if(cod == '100'){
+        qtde=window.prompt("Digite a quantidade de lanches: ");
+        qtde=parseInt(qtde);
+        preco=8*qtde;
+        alert("Cachorro quente;\nR$ "+preco+";\n"+qtde+" lanches.");
+    }else if(cod == '101'){
+        qtde=window.prompt("Digite a quantidade de lanches: ");
+        qtde=parseInt(qtde);
+        preco=9*qtde;
+        alert("Hambúrguer;\nR$ "+preco+";\n"+qtde+" lanches.");
+    }else if(cod == '102'){
+        qtde=window.prompt("Digite a quantidade de lanches: ");
+        qtde=parseInt(qtde);
+        preco=10*qtde;
+        alert("X-burguer;\nR$ "+preco+";\n"+qtde+" lanches.");
+    }else if(cod == '103'){
+        qtde=window.prompt("Digite a quantidade de lanches: ");
+        qtde=parseInt(qtde);
+        preco=9.50*qtde;
+        alert("Bauru simples;\nR$ "+preco+";\n"+qtde+" lanches.");
+    }else if(cod == '104'){
+        qtde=window.prompt("Digite a quantidade de lanches: ");
+        qtde=parseInt(qtde);
+        preco=10.50*qtde;
+        alert("Bauru duplo;\nR$ "+preco+";\n"+qtde+" lanches.");
+    }else{alert("opcao Invalida")}
+   </script>
+  
+</body>
+</html>

@@ -1,0 +1,36 @@
+@charset "utf-8";
+/* CSS Document */
+h1{
+	font-size: 42px;
+	color: #A00003;
+}
+
+p{
+	text-align: justify;
+	font-size: 20px;
+	color: #0A7E22
+}
+.meup{
+	color: #141A96;
+	font-weight: bold; /*negrito*/
+}
+
+img{
+	width: 300px;
+	margin-left: 40%;
+	margin-right: 25%;
+}
+
+body{
+	background-color: #FFE9A9;
+}
+
+li{
+	font-size: 20px;
+	color:#500078;
+	padding-bottom: 5%; /*espaçamento entre itens*/
+	line-height: 120%; /*espaçamento entre linhas e começa n 100%*/
+	margin-left: 30%;
+	margin-right: 30%;
+	
+}

@@ -1,0 +1,9 @@
+create database teste;
+use teste;
+
+create table Pessoa(
+cod int primary key auto_increment,
+nome varchar(150),
+sobrenome varchar(150));
+
+insert into Pessoa(nome, sobrenome) values ('Malcon','X');

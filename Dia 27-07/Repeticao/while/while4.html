@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>while 4</title>
+	
+  <script language="javascript">
+   /*Faça um programa em JavaScript que 
+   solicite o nome e o peso 
+   de 10 pessoas e exiba os nomes 
+   das pessoas que pesam entre 60 e 100 kg 
+   usar while*/
+   var cont=0, n, p, acumNome="";
+   
+   while(cont<4){
+      n=window.prompt("Digite seu nome");
+	  p=window.prompt("Digite seu peso");
+	  p=parseFloat(p);
+	  
+	  if(p>=60 && p<=100)
+	    acumNome= acumNome + n + "  " ;
+	cont++;	
+	}
+    alert("Nomes das pessoas de 60 a 100 kg \n" +acumNome);
+
+ </script>
+</head>
+<body>
+</body>
+</html>

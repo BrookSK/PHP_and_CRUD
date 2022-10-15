@@ -1,0 +1,12 @@
+<?php
+require_once "Pessoa.php";
+require_once "Cachorro.php";
+
+$bastiao = new Pessoa();
+$bastiao->setNome("Bastião da costa");
+
+$lulu = new Cachorro();
+$lulu->setNome("Lulu");
+$lulu->setDono($bastiao);
+
+echo $lulu->getDono()->getNome();

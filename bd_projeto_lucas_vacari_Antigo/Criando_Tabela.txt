@@ -1,0 +1,46 @@
+﻿/* criando o banco de dados bd_projeto*/
+create database bd_projeto;
+
+/*definindo o banco de dados a ser usado*/
+use bd_projeto;
+
+/*criando a tabela tb_cliente*/
+create table tb_cliente(
+id_cliente int not null auto_increment primary key,
+nome_cliente varchar(45) not null,
+rg_cliente varchar(13) not null,
+cpf_cliente varchar(15) unique not null,
+email_cliente varchar(60) not null
+);
+
+/*inserindo valores na tabela tb_cliente diretamante*/
+insert into tb_cliente value
+('1','Lucas','12015366','16543243541','bomdiaecia@gmail.com'),
+('2','Thiago','15645313','58765465213','good@gmail.com'),
+('3','Maria','5345321354','02345310013','maker@gmail.com'),
+('4','Renato','0124340058','5643515467898','todomundo@gmail.com'),
+('5','Julio','2146545006','15241648970336','crisgood@gmail.com'),
+('6','Sophia','220856922','300695330055','sosoLG@gmail.com'),
+('7','João','566874650','0002566395549','jaozisil@gmail.com'),
+('8','Eduardo','587016540','354540506633780','edukk1oi@gmail.com');
+
+/*Exibindo os dados adicionados*/
+select * from tb_cliente;
+
+/*criando a tabela tb_carro com a chave estrangeira*/
+create table tb_carro(
+id_carro int not null auto_increment primary key,
+nome_carro varchar(45) not null,
+placa_carro varchar(7) not null,
+cod_cliente int not null,
+constraint fk_cod_cliente foreign key(cod_cliente) references tb_cliente(id_cliente)
+);
+
+/*inserindo valores na tabela tb_carro diretamante*/
+insert into tb_carro value
+('1','Fusca','FORK3369','5'),
+('2','Tesla','DOL5893','8'),
+('3','Uno','GHJ8592','2'),
+('4','Gol','FRT0688','7');
+
+//animate.css

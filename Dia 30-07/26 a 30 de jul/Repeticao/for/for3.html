@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>for 3</title>
+	
+  <script language="javascript">
+  /*  Em uma eleição de grêmio escolar existem duas chapas. 
+	  Os votos são informados através do código:
+	1-	Chapa 1
+	2-	Chapa 2
+	3-	Voto nulo
+	4-	Voto branco
+	Faça um programa em JavaScript que solicite a quantidade de eleitores 
+	de uma escola e solicite o código para cada eleitor  e no final exiba:
+	•	Quantidade de votos para chapa 1
+	•	Quantidade de votos para chapa 2
+	•	Quantidade de votos nulos
+	•	Quantidade de votos brancos* - usar for*/
+ 
+    var cont, qteEleitores, voto, qteChapa1=0, qteChapa2=0, qteNulos=0, qteBrancos=0;
+	
+	qteEleitores=window.prompt("Digite a quantidade de eleitores");
+	qteEleitores=parseInt(qteEleitores);
+	
+	for (cont =1;cont<=qteEleitores; cont++){
+	  voto=window.prompt("Eleitor " + (cont) + "\nDigite seu voto \n1-Chapa 1 \n2-Chapa 2 \n3-Nulo \n4-Branco");
+	  voto=parseInt(voto);
+	  
+	  if(voto==1)
+	    qteChapa1++;
+	  else if (voto==2)
+	    qteChapa2++;
+	  else if (voto==3)
+	    qteNulos++
+	  else if (voto==4)
+	    qteBrancos++
+	  else
+	    {
+		  alert("Opcao inválida");
+		  cont--;
+		
+		}
+	}
+     alert("Resultado de votos \n\n"+
+	        "Chapa 1: " + qteChapa1 +" voto(s)"+
+			"\nChapa 2: " + qteChapa2 + " voto(s)" +
+			"\nNulos: " + qteNulos + " voto(s)" +
+			"\nBrancos: " + qteNulos + " voto(s)" );
+
+
+
+
+  
+  
+  
+  
+  
+  </script>
+</head>
+<body>
+</body>
+</html>

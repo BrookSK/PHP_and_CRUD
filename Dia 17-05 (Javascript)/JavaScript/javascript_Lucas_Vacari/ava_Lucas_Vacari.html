@@ -1,0 +1,81 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Formulário de Cálculo de IMC</title>
+	<script language="javascript">
+		function v1(){
+			if(form1.nome.value==""){
+				
+				window.alert("Nome não informado.");
+			}
+			
+		function v2(){
+			peso=form1.peso.value;
+			altura=form1.altura.value;
+			imc=peso/(altura*altura);
+			
+			form1.resultado.value=imc;
+			
+			}
+			
+		function v3(){
+			if(imc>=0 && imc<=24.9){
+				
+				n=form1.nome.value;
+				cl="Normal"
+				window.alert("Nome: "+n+" Resultado: "+imc+" Classificação: "+cl);
+			
+			}
+			
+			if(imc>=25 && imc<=29.9){
+			
+				n=form1.nome.value;
+				cl="Obesidade 1"
+				window.alert("Nome: "+n+" Resultado: "+imc+" Classificação: "+cl);
+			
+			}
+			
+			if(imc>=30 && imc<=39.9){
+			
+				n=form1.nome.value;
+				cl="Obesidade 2"
+				window.alert("Nome: "+n+" Resultado: "+imc+" Classificação: "+cl);
+
+			}
+			
+			if(imc>=40){
+			
+				n=form1.nome.value;
+				cl="Obesidade 3"
+				window.alert("Nome: "+n+" Resultado: "+imc+" Classificação: "+cl);
+
+        	}
+		
+		}
+			
+		}
+	</script>
+</head>
+
+<body>
+	<form name="form1" id="form1" onSubmit="v3()">
+		
+		<label>NOME:</label><input type="text" name="nome" size="30" maxlength="30" autofocus onBlur="v1()"><br><br>
+		
+		<label>SEXO:</label><select name="sexo" id="sexo">
+			<option value="Masculino">M</option>
+			<option value="Feminino">F</option>
+		</select><br><br>
+		
+		<label>PESO:</label><input type="number" name="peso" id="peso" min="0" step="0.10"><br><br>
+		
+		<label>ALTURA:</label><input type="number" name="altura" id="altura" min="0" step="0.10"><br><br>
+		
+		<label>RESULTADO:</label><input type="text" name="resultado" id="resultado" onFocus="v2()"><br><br>
+		
+		<input type="submit" name="enviar" value="Enviar">
+		<input type="reset" name="limpar" value="Limpar">
+	</form>
+</body>
+</html>

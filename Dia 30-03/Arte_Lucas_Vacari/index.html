@@ -1,0 +1,96 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Arte digital</title>
+	<style type="text/css">
+  		/*Formatação da div principal*/
+		#divprincipal{
+  			width:80%;
+  			position:relative;
+  			margin-left:10%;
+  		}
+  		/*Formatação da div banner*/
+  		#divbanner{
+  			width:100%;
+  			height:350px;
+  			background-color:#EF781C;
+  		}
+  		/*Formatação da div menu*/
+  		#divmenu{
+  			width:100%;
+  			height:30px;
+  			background-color:#96E989;
+  		}
+  		/*Formatação da div conteúdo*/
+  		#divconteudo{
+  			width:100%;
+  			height:700px;
+  			background-color:#A8A8A8;
+  		}
+  		/*Formatação do menu*/
+		/*rótulo do menu */
+  		#menu ul{
+  			padding:0px;
+  			margin:0px;
+  			background-color:#454343;
+  			list-style:none;
+  		}
+  		/* Colocando menu em linha */
+  		#menu ul li{
+			Margin-left:10px;  
+  			display: inline; 
+  		}
+  		/* colocando menu em bloco */
+  		#menu ul li a{
+  			padding: 2px 20px;
+  			display: inline-block;
+  			background-color:#454343;
+  			color: #fffdfd;
+  			text-decoration: none;
+  			border-bottom:3px solid #454343;
+  			font-size:20px;
+  			transition:400ms;
+  		}
+  		/*Rótulo do botão ao passar o mouse */
+  		#menu ul li a:hover{
+ 			background-color:#454343;
+  			color: #6D6D6D;
+  			border-bottom:3px solid #EA0000;
+  		}
+		
+   		.formataiframe{
+			width:100%;
+			height:700px;
+			border:none; /*Tira a borda do iframe*/
+		}
+
+ 	</style>
+ 
+</head>
+<body>
+
+	<div id="divprincipal">
+ 		<div id="divbanner">
+			<center><img src="bannersuperior_lucas_vacari.jpg"></center>
+ 		</div>
+ 		<div id="divmenu">
+ 			<nav class="formataiframe" id="menu"><!--<nav>é um conteiner de menu...como se fosse uma div-->
+				<!--Menu criado a partir de lista-->
+ 				<ul>
+  					<li><a href="home.html" target="caixa">Home</a></li>
+  					<li><a href="artedigital.Html" target="caixa">O que é Arte Digital</a></li>
+  					<li><a href="comosurgiu.html" target="caixa">Como Surgiu a Arte Digital</a></li>
+  					<li><a href="caracteristicas.html" target="caixa">Característica</a></li>
+ 					<li><a href="tiposdearte.html" target="caixa">Tipos Arte Digital</a></li>
+ 				 </ul>
+			</nav>
+
+ 		</div>
+ 		<div id="divconteudo">
+ 			<iframe name="caixa" src="home.html" width="100%" height="700">
+			</iframe>
+ 		</div>
+	</div>
+</body>
+</html>

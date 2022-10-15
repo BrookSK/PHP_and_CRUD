@@ -1,0 +1,300 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.83.1">
+    <title>Album example · Bootstrap v5.0</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/album/">
+
+    <link rel="icon" href="favicon.ico"><!--coloca o icone no site do navegador-->
+
+    <!-- Bootstrap core CSS -->
+<link href="../css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+		
+		.titulo{
+			color:#FFB497;
+			font-weight: bold;
+		}
+		
+		.fundo1{
+			color:#3A3737;
+		}
+		
+		.imagem{
+			padding-top: 10px;
+			position: relative;
+		}/*não utilizei, não chamei no html pois não quis uzar*/
+		
+		.textoimg{
+			font-weight: bold;
+		}
+		
+		.preco{
+			font-weight: bold;
+			color:#0064FF;
+			font-size: 24px;
+		}
+		
+		body{
+			background-color: #212121;
+		}/*cor de fundo da pg*/
+		
+		.fundo{
+			background-color: #292828;
+		}/*fundo da pg no conteiner*/
+		
+		.fundoimg{
+			background-color: #E9E9E9;
+		}/*fundo para cada produto, colocado nas divs de cada produto*/
+		
+		.btn:hover{
+			background-color: #A28A7B;
+			font-size: 15px;
+		}
+    </style>
+
+    
+  </head>
+  <body bgcolor="black">
+	  
+	  
+    
+	<header>
+	  <div class="collapse bg-dark" id="navbarHeader">
+		<div class="container">
+		  <div class="row">
+			<div class="col-sm-8 col-md-7 py-4">
+			  <h4 class="titulo">Sobre a Empresa</h4>
+			  <p class="text-white">Creative Mug é uma empresa que atua fornecendo os mais diversos tipos de canecas. Atendendo todo o território nacional, nosso objetivo é ser uma das principais fornecedoras de canecas personalizadas do país, sempre com qualidade, credibilidade e responsabilidade. Para pequenos ou grandes negócios, em qualquer lugar do Brasil, o Creative Mug é a solução perfeita para você empreender e impulsionar suas vendas!</p>
+			</div>
+			<div class="col-sm-4 offset-md-1 py-4">
+			  <h4 class="titulo">Contato</h4>
+			  <ul class="list-unstyled">
+				<li><a href="#" class="text-white">Siga-nos no Twitter</a></li>
+				<li><a href="#" class="text-white">Curta nossa página no Facebook</a></li>
+				<li><a href="#" class="text-white">Mande-nos um e-mail</a></li>
+			  </ul>
+			</div>
+		  </div>
+		</div>
+	  </div>
+	  <div class="navbar navbar-dark bg-dark shadow-sm">
+		<div class="container">
+		  <a href="#" class="navbar-brand d-flex align-items-center">
+			<img src="caneca.png" width="15%" height="15%" alt="Ícone do Site">&nbsp &nbsp
+			<strong>Creative Mug</strong>
+		  </a>
+		  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		  </button>
+		</div>
+	  </div>
+	</header>
+
+	<main>
+
+	  <section class="py-5 text-center container">
+		<div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+  			<div class="carousel-inner">
+				<div class="carousel-item active">
+	  				<img src="banner1.jpg" class="d-block w-100" alt="banner caneca personalizada">
+				</div>
+				<div class="carousel-item">
+	  				<img src="banner2.jpg" class="d-block w-100" alt="caneca magica">
+				</div>
+				<div class="carousel-item">
+	  				<img src="banner3.jpg" class="d-block w-100" alt="caneca para sublimacao">
+				</div>
+  			</div>
+  			<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+				<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+				<span class="visually-hidden">Previous</span>
+  			</button>
+  			<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+				<span class="carousel-control-next-icon" aria-hidden="true"></span>
+				<span class="visually-hidden">Next</span>
+  			</button>
+		</div>
+	  </section>
+
+	  <div class="album py-5 fundo">
+		<div class="container fundo"><!--fundo da pg no conteiner*/-->
+
+		  <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+			<div class="col">
+			  <div class="card shadow-sm"><!--height="225"-->
+				<img src="slv1.jpg" alt="Caneca" width="100%" height="100%">
+
+				<div class="card-body fundoimg"><!--fundo para cada produto, colocado nas divs de cada produto-->
+				  <p class="card-text textoimg">Caneca Personalizada de Dragão</p><p class="preco">R$ 59,99</p>
+				  <div class="d-flex justify-content-between align-items-center">
+					<div class="btn-group">
+					  <button type="button" class="btn btn-sm btn-outline-secondary">Detalhes</button>
+					</div>
+					<small class="text-muted">1 Dia</small>
+				  </div>
+				</div>
+			  </div>
+			</div>
+			<div class="col">
+			  <div class="card shadow-sm">
+				<img src="slv2.jpg" alt="Caneca" width="100%" height="100%">
+
+				<div class="card-body fundoimg">
+				  <p class="card-text textoimg ">Caneca Personalizada do Groot</p><p class="preco">R$ 49,90</p>
+				  <div class="d-flex justify-content-between align-items-center">
+					<div class="btn-group">
+					  <button type="button" class="btn btn-sm btn-outline-secondary">Detalhes</button>
+					</div>
+					<small class="text-muted">1 Semana</small>
+				  </div>
+				</div>
+			  </div>
+			</div>
+			<div class="col">
+			  <div class="card shadow-sm">
+				<img src="slv3.jpg" alt="Caneca" width="100%" height="100%">
+
+				<div class="card-body fundoimg">
+				  <p class="card-text textoimg">Caneca personalizadas para lembranças</p><p class="preco">R$ 39,50</p>
+				  <div class="d-flex justify-content-between align-items-center">
+					<div class="btn-group">
+					  <button type="button" class="btn btn-sm btn-outline-secondary">Detalhes</button>
+					</div>
+					<small class="text-muted">15 Dias</small>
+				  </div>
+				</div>
+			  </div>
+			</div>
+
+			<div class="col">
+			  <div class="card shadow-sm">
+				<img src="slv9.jpg" alt="Caneca" width="100%" height="100%">
+
+				<div class="card-body fundoimg">
+				  <p class="card-text textoimg">Caneca personalizada para jogos</p><p class="preco">R$ 47,20</p>
+				  <div class="d-flex justify-content-between align-items-center">
+					<div class="btn-group">
+					  <button type="button" class="btn btn-sm btn-outline-secondary">Detalhes</button>
+					</div>
+					<small class="text-muted">9 Dias</small>
+				  </div>
+				</div>
+			  </div>
+			</div>
+			<div class="col">
+			  <div class="card shadow-sm">
+				<img src="slv5.jpg" alt="Caneca" width="100%" height="100%">
+
+				<div class="card-body fundoimg">
+				  <p class="card-text textoimg">Caneca personalizada de aniversário</p><p class="preco">R$ 29,99</p>
+				  <div class="d-flex justify-content-between align-items-center">
+					<div class="btn-group">
+					  <button type="button" class="btn btn-sm btn-outline-secondary">Detalhes</button>
+					</div>
+					<small class="text-muted">20 Horas</small>
+				  </div>
+				</div>
+			  </div>
+			</div>
+			<div class="col">
+			  <div class="card shadow-sm">
+				<img src="slv6.jpg" alt="Caneca" width="100%" height="100%">
+
+				<div class="card-body fundoimg">
+				  <p class="card-text textoimg">Caneca Mágica</p><p class="preco">R$ 65,00</p>
+				  <div class="d-flex justify-content-between align-items-center">
+					<div class="btn-group">
+					  <button type="button" class="btn btn-sm btn-outline-secondary">Detalhes</button>
+					</div>
+					<small class="text-muted">10 Dias</small>
+				  </div>
+				</div>
+			  </div>
+			</div>
+
+			<div class="col">
+			  <div class="card shadow-sm">
+				<img src="slv7.png" alt="Caneca" width="100%" height="100%">
+
+				<div class="card-body fundoimg">
+				  <p class="card-text textoimg">Caneca personalizada com a sua arte</p><p class="preco">R$ 32,60</p>
+				  <div class="d-flex justify-content-between align-items-center">
+					<div class="btn-group">
+					  <button type="button" class="btn btn-sm btn-outline-secondary">Detalhes</button>
+					</div>
+					<small class="text-muted">12 Dias</small>
+				  </div>
+				</div>
+			  </div>
+			</div>
+			<div class="col">
+			  <div class="card shadow-sm">
+				<img src="slv8.jpg" alt="Caneca" width="100%" height="100%">
+
+				<div class="card-body fundoimg">
+				  <p class="card-text textoimg">Caneca personalizada de time com nome</p><p class="preco">R$ 26,35</p>
+				  <div class="d-flex justify-content-between align-items-center">
+					<div class="btn-group">
+					  <button type="button" class="btn btn-sm btn-outline-secondary">Detalhes</button>
+					</div>
+					<small class="text-muted">16 Dias</small>
+				  </div>
+				</div>
+			  </div>
+			</div>
+			<div class="col">
+			  <div class="card shadow-sm">
+				<img src="slv0.jpg" alt="Caneca" width="100%" height="100%">
+
+				<div class="card-body fundoimg">
+				  <p class="card-text textoimg">Canecas para sublimação</p><p class="preco">R$ 149,10</p>
+				  <div class="d-flex justify-content-between align-items-center">
+					<div class="btn-group">
+					  <button type="button" class="btn btn-sm btn-outline-secondary">Detalhes</button>
+					</div>
+					<small class="text-muted">30 Dias</small>
+				  </div>
+				</div>
+			  </div>
+			</div>
+		  </div>
+		</div>
+	  </div>
+
+	</main>
+
+	<footer class="text-muted py-5">
+	  <div class="container">
+		<p class="float-end mb-1">
+		  <a href="#">Voltar para cima</a>
+		</p>
+		<p class="mb-1"> &copy; Bootstrap</p>
+	  </div>
+	</footer>
+
+
+		<script src="../js/bootstrap.bundle.min.js"></script>
+
+      
+  </body>
+</html>

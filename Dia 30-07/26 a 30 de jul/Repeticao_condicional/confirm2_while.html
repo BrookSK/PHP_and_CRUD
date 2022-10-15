@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title> confirm2</title>
+	<script language="javascript">
+  
+		/* Faça um programa em JavaScript que solicite
+		o nome de uma pessoa para cadastro 
+		e usando confirm pergunte se deseja 
+		cadastrar outra. Finalizar somente quando
+		não quiser cadastrar mais e exibir todos
+		os nomes digitados*/
+		
+
+        var
+		n, nomes="",resp=true;
+		   
+		   while(resp==true){
+			 n=window.prompt("Digite o nome da pessoa");
+			
+			 nomes=nomes + "  " + n; 
+			
+		   
+			resp= window.confirm("Deseja cadastrar outra pessoa");
+		   }
+
+		   alert("Pessoas cadastradas:" + nomes);
+
+ </script>
+ </head>
+
+<body>
+</body>
+</html>

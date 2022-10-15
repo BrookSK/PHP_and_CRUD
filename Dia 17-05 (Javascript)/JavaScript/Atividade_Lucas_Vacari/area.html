@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Projeto área</title>
+	<script language="javascript">
+		/*document.write("<table border=1 align=center width=300>");
+		document.write("<tr><td>Área do quadrado</td><td>"+area+"</td></tr>");
+		document.write("<tr><td colspan=2><img width=200 src=quadrado.jpg></td></tr>");
+		document.write("</table>");*/
+		
+		opc=window.prompt("Escolha uma opção de cálculo de área:\n1-Quadrado\n2-Retângulo\n3-Triângilo\n4-Losango");
+		opc=parseInt(opc);//conversão para número inteiro
+		
+		switch(opc){
+			case 1: 
+				lado=window.prompt("Digite o valor do lado do quadrado: ");
+				lado=parseFloat(lado);//conversão para número real
+				area=lado*lado;
+				window.alert("A área do quadrado é: "+area);
+				pol="<font color=#0000FF>Quadrado</font>";
+				foto="<img src=quadrado.jpg width=200>"
+				break;
+			case 2:
+				base=parseFloat(window.prompt("Informe o valor da base do retângulo: "));
+				altura=parseFloat(window.prompt("Informe o valor da altura do retângulo: "));
+				area=base*altura;
+				window.alert("A área do Retângulo é: "+area);
+				pol="<font color=#0000FF>Retângulo</font>";
+				foto="<img src=retangulo.png width=200>"
+				break;
+			case 3:
+				base=parseFloat(window.prompt("Informe o valor da base do triângulo: "));
+				altura=parseFloat(window.prompt("Informe o valor da altura do triângulo: "));
+				area=(base*altura)/2;
+				window.alert("A área do Triângulo é: "+area);
+				pol="<font color=#0000FF>Triângulo</font>";
+				foto="<img src=triangulo.png width=200>"
+				break;
+			case 4:
+				dmaior=parseFloat(window.prompt("Informe o valor da diagonal maior do losango: "));
+				dmenor=parseFloat(window.prompt("Informe o valor da diagonal menor do losango: "));
+				area=(dmaior*dmenor)/2;
+				window.alert("A área do Losango é: "+area);
+				pol="<font color=#0000FF>Losango</font>";
+				foto="<img src=losango.png width=200>"
+				break;
+			default:
+				window.alert("Opção inválida!");
+		}
+		document.write("<table border=1 align=center width=300>");
+		document.write("<tr><td>Polígono: </td><td>"+pol+"</td></tr>");
+		document.write("<tr><td>Área: </td><td>"+area+"</td></tr>");
+		document.write("<tr><td colspan=2><center></center>"+foto+"</td></tr>");
+		document.write("</table>");
+	</script>
+</head>
+
+<body>
+</body>
+</html>

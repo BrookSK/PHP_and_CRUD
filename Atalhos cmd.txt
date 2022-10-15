@@ -1,0 +1,575 @@
+dir = diretorio que contenha pastas e arquivos
+cd = indica o arquivo a ser aberto
+cd.. = voltar
+cd. = volta ao inicio
+start = executar
+cls = limpa a tela
+md = cria uma pasta
+rd = exclui uma pasta
+cd/ = leva ao c:
+F: = entra no hd
+eventvwr.msc = mostra a atividade e todos os logs do pc
+
+Caminho usado
+
+F:
+cd \Lucas\My_Coisas\github\Projeto
+
+cd \Lucas\My_Coisas\github\rpgEmTextook>
+
+------------------------------------------------------------
+                       Comandos git
+------------------------------------------------------------
+
+
+(((( arquivos com .gitignore são ignorados no github, não são passados no push
+
+exs: 
+
+*.psd = ignora todos os arquivos .psd
+/imagens = ignora todos os arquivos da pasta imagens
+/imagens/*.psd = ignora todos os arquivos .psd da pasta imagens
+
+# comnetario no arquivo .gitignore #
+Acesse o site: https://www.toptal.com/developers/gitignore para ver quais os arquivos basicos que são ignorados em determinada linguagem ))))
+
+mkdir "meuProjeto" =  criando um diretório para o seu projeto
+
+cd "meuProjeto" = Entre no diretório do seu projeto
+
+git init = Inicie o repositório de código no diretório atual
+
+git config --local user.name "Seu Nome" = Configure o nome do usuário para o repositório atual
+
+git config --local user.email "Seu@Email" = Configure o e-mail do usuário para o repositório atual
+
+git status = Veja o status
+
+git >> arquivo.txt = Crie um arquivo
+
+git add arquivo.txt = adicione-o ao repositório
+
+git add . = adiciona todos os arquivos (cuidado com isso)
+
+git commit = Registre as mudanças na linha do tempo com o commit ([i] para entrar na edição e [esc:x] para sair)
+
+git commit -m “mensagem” = Registre as mudanças na linha do tempo com o commit tambem
+
+git log = git log --oneline = histórico dos commits no seu repositório
+
+git config core.autocrlf input = Para para a mensagem de erro em arquivos com .cpp ou outro tipo de .
+
+git branch = mostra todas as vertentes
+
+git branch nomeDaVertente = cria uma vertente
+
+git checkout nomeDaVertente = Mude para esta vertente (A master é a principal e salva os arquivos)
+
+git merge nomeDaVertente = mescla as alterações das vertentes [ entra na vertente principal pimeiro !!!]
+
+git branch -D localBranchName = apaga a branch
+
+git remote add origin https://github.com/BrookSK/teste1.git = [ Link do seu repositório do github ] criar um novo repositório no github e adicionar o endereço deste repositório como a origem dos dados do nosso repositório local
+
+git push = enviar o aquivo do pc para o github [sempre antes de dar esse cod, dar o cod 'git pull']
+
+git pull = enviar o aquivo do github para o pc
+
+git clone link do repositorio = baixa o repositorio do link
+
+
+
+
+
+------------------------------------------------------------
+                    Github Para colaborar
+------------------------------------------------------------
+
+Caminho usado
+
+F:
+cd \Lucas\My Coisas\github
+
+Ou
+
+cd \Lucas\My Coisas\github\rpgEmTexto
+
+cd \Lucas\My_Coisas\Outros\Projects
+
+cd \pasta\github\rpgEmTexto
+
+------------------------------------------------------------
+
+git clone link do repositorio = baixa o repositorio do link
+
+cd pasta = entra na pasta
+
+git config --local user.name "Seu Nome" = Configure o nome do usuário para o repositório atual
+
+git config --local user.email "Seu@Email" = Configure o e-mail do usuário para o repositório atual
+
+git branch nomeDaVertente = cria uma vertente
+
+git checkout nomeDaVertente = Mude para esta vertente
+
+git remote add origin https://github.com/BrookSK/rpgEmTexto.git = [ Link do seu repositório do github ] criar um novo repositório no github e adicionar o endereço deste repositório como a origem dos dados do nosso repositório local
+
+[modifica o arquivo]
+
+git add . = adiciona todos os arquivos (cuidado com isso)
+
+git commit -m “mensagem” = Registre as mudanças na linha do tempo com o commit tambem
+
+git log --oneline = histórico dos commits no seu repositório
+
+git push origin nomeDaVertente = envia as alterações da vertente que tinha criado e não da Principal [master]
+
+{depois entrar no repositorio do github e dar um pullrequest e enviar}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+------------------------------------------------------------
+                              msys64
+------------------------------------------------------------
+
+pacman -Syu = So foi executado uma vez (quando foi feita a instalação)(Não executar novamanete)
+
+pacman -S base-devel vim mingw-w64-i686-gcc = So foi executado uma vez (quando foi feita a instalação dos pacotes [GCC] )(Não executar novamanete)
+
+
+
+
+
+
+
+------------------------------------------------------------
+                         Banco de Dados
+------------------------------------------------------------
+
+Abrir o Xampp Control Panel e marcar as caixinhas:
+Apache e MySQL e dar um star para ambas.
+
+cd /
+cd xampp_novo\mysql\bin
+
+show databases; = lista todos os banco de dados da máquina
+
+alter table Produto_Venda add column qtdeVendida int; = altera a tabela [Produto_Venda] e adiciona uma coluna [qtdeVendida int]
+
+drop databases nome_BD; = exclui o banco de dados
+
+show columns in nome_da_tabela; = mostra a tabela criada
+
+mysql -h localhost -u root = entar no servidor do MYSQL
+
+mysql = evocamos o servidor
+
+-h = dizemos que o próximo dado é referente ao host
+
+localhost = informamos o o host
+
+-u = dizemos que o próximo dado é referente ao usuário
+
+root = informamos o usuário
+
+exit = Para sair do MySQL
+
+create database nome_BD; = criar um banco de dados
+
+use nome_BD; = entrar no banco
+
+------------------------------------------------------------
+
+Criação de tabelas do MER, [Sempre criar tabelas que não 
+dependem de outras tabelas primeiro
+{ou seja, que não tem chaves estrangeiras}](Fazer com 
+base no MER)
+
+------------------------------------------------------------
+
+create table nomeDaTabela(
+	-> cod tinyint primary key auto_increment,
+	-> descricao varchar(100)
+	-> );
+
+create table Produto(cod int primary key auto_increment,nomeDoProduto varchar(255));
+
+------------------------------------------------------------
+
+Criação de tabelas do MER, [Sempre criação tabelas que 
+dependem de outras tabelas {ou seja, que tem chaves 
+estrangeiras}](Fazer com 
+base no MER)
+
+------------------------------------------------------------
+
+create table Endereco(
+cod bigint primary key auto_increment,
+CEP char(8),
+tipoLogradouro tinyint,
+logradouro varchar(255),
+codDoBairro bigint,
+foreign key(tipoLogradouro) references tipoLogradouro(cod),
+foreign key(codDoBairro) references Bairro(cod)
+);
+
+foreign key(codResp) references responsavel(cod) = Define o campo 'codResp' como uma chave estrangeira que faz referencia ao campo 'cod' da tabela 'responsavel' 
+
+create table Venda(cod bigint primary key auto_increment,qtdVendida tinyint,codDoProduto int,codDoEndereco bigint,foreign key(codDoProduto) references Produto(cod), foreign key(codDoEndereco) references Endereco(cod));
+
+------------------------------------------------------------
+
+update nome_Tabela, set Nome_Coluna = novo_registro, where nome_Linha = nome  ==  [altera um dado expecifico]
+
+SHOW CREATE TABLE tbl_Livro; = Mostrar código usado na criação de uma tabela
+
+SHOW TABLES; = Mostrar as tabelas do banco de dados atual
+
+mysqlshow -u root -p = Ver os bancos de dados disponíveis
+
+mysqlshow -u root -p db_Biblioteca = Ver as tabelas em um banco de dados específico
+
+ALTER TABLE nome_tabela ADD nome_coluna tipo_dados; = Adicionar uma coluna à tabela
+
+ALTER TABLE nome_tabela DROP COLUMN nome_coluna; = Excluir uma coluna de uma tabela
+
+ALTER TABLE nome_tabela MODIFY nome_coluna tipo_dados NOT NULL; = Adicionar uma constraint do tipo NOT NULL a uma coluna
+ 
+Mais cod em :
+
+http://www.bosontreinamentos.com.br/sql-com-sql-server/7-t-sql-alter-e-drop-table-alterar-e-excluir-tabelas-e-colunas-sql-server/
+
+http://www.bosontreinamentos.com.br/mysql/mysql-comandos-show-describe-e-mysqlshow-39/
+
+Livro BD André
+
+Manuais internet
+
+
+
+------------------------------------------------------------
+
+create table aluno (
+id_aluno int auto_increment primary key,
+nome_aluno varchar(45),
+endereco_aluno varchar(45)
+);
+
+
+------------------------------------------------------------
+
+create table aluno (
+id_aluno int auto_increment,
+nome_aluno varchar(45),
+endereco_aluno varchar(45),
+cronstraint pk_aluno primary key (id_aluno)
+);
+
+
+------------------------------------------------------------
+
+/* criando o banco de dados bd_projeto*/
+create database bd_teste;
+
+/*definindo o banco de dados a ser usado*/
+use bd_teste;
+
+/*criando a tabela tb_cliente*/
+create table tb_cliente(
+id_cliente int not null auto_increment primary key,
+nome_cliente varchar(45) not null,
+rg_cliente varchar(13) not null,
+cpf_cliente varchar(15) unique not null,
+email_cliente varchar(60) not null
+);
+
+/*inserindo valores na tabela diretamante*/
+insert into tb_cliente(id_cliente,nome_cliente,rg_cliente,cpf_cliente,email_cliente)values(1,'Lucas',5105433,13546870098,'lucasmen@gmail.com');
+
+------------------------------------------------------------
+                   Banco de Dados - Estudo - 
+------------------------------------------------------------
+
+Estudar o Código :
+
+Para oq serve Primary Key = Para identificarum registo na tabela
+
+O que siginifica Autoincrement = ele faz com que um número seja gerado quando um novo registro é inserido em uma tabela, valor inicial padrão é 1, e se incrementa de 1 em 1
+
+O que é a chave primaria = Serve para identificar da forma unica um registo na tabela ou seja...cada registro vai ter uma chave primaria uníca para ele e não pode ser nulo 
+
+O que é a chave estrangeira = É uma chave que vai relacionar a a chave primaria dessa tabela com a chave primaria da outra tabela ou seja ela serve para um registro de uma tabela fazer referencia a outro registro de outra tabela
+
+O que é null = Quer dizer que é nulo, não armazena nenhum espaço
+
+O que é char = 
+
+O que é varchar = 
+
+O que é int = -2^31
+
+O que é bigint = -2^63
+
+O que é tinyint = 0 a 255
+
+foreign key(codResp) references responsavel(cod) = Define o campo 'codResp' como uma chave estrangeira que faz referencia ao campo 'cod' da tabela 'responsavel'
+
+O que é o (100) na frente do varchar = indica a quantidades de caracteres que isso poderá criar 
+
+o que é decimal(10,2) = 10 cassa antes da virgula e 2 casas depois
+
+O que é datetime = converte em data e hora
+
+O que é foto blob = BLOB é um termo q se refere a dados de texto, imagem
+
+O que é binary large object = Significa BLOB
+
+O que é date = Retorna a data
+
+O que é vende bit = 
+
+ = responsavel por limitar os dados da tabela
+
+Estudar os tipos de setas do MER :
+
+Estudar os tipos de setas do DER :
+
+Estudar os tipos de cardinalidade do MER :
+
+Estudar os tipos de cardinalidade do DER :
+
+E estudar o POR QUE de tudo? : 
+
+
+
+
+
+
+------------------------------------------------------------
+                  Comandos Visual Studio Code
+------------------------------------------------------------
+
+f7 = compila
+
+
+
+------------------------------------------------------------
+                             XAMPP
+------------------------------------------------------------
+
+vai no google e e digita: localhost
+
+C:\Xampp_novo\htdocs\CriaUmaPasta
+
+vai no google e e digita: localhost/php_lucas_vacari/
+
+
+------------------------------------------------------------
+                      Banco de Dados 2
+------------------------------------------------------------
+
+/*criando o banco de dados bd_projeto*/
+create database bd_teste;
+
+
+/*Criando parametros*/
+default character set utf8
+default collate utf8_general_ci;
+
+
+/*definindo o banco de dados a ser usado*/
+use bd_teste;
+
+
+/*exemplo1 - criando a tabela tb_cliente*/
+create table tb_cliente(
+id_cliente int not null auto_increment primary key,
+nome_cliente varchar(45) not null,
+rg_cliente varchar(13) not null,
+cpf_cliente varchar(15) unique not null,
+email_cliente varchar(60) not null
+);
+
+
+/*exemplo2 - criando tabela tb_pessoas*/
+create table tb_pessoas(
+id_pessoas int not null auto_increment,
+nome_pessoas varchar(30) not null,
+nascimento_pessoas date,
+sexo_pessoas enum('M','F'),
+peso_pessoas decimal(5,2),
+altura_pessoas decimal(3,2),
+nacionalidade_pessoas varchar(20) default 'Brasil',
+primary key (id_pessoas)
+) default charset=utf8;
+
+
+/*inserindo valores na tabela tb_cliente diretamante*/
+insert into tb_cliente(id_cliente,nome_cliente,rg_cliente,cpf_cliente,email_cliente)values(1,'Lucas',5105433,13546870098,'lucasmen@gmail.com');
+
+
+/*inserindo valores na tabela tb_pessoas diretamante*/
+insert into tb_pessoas(nome_pessoas,nascimento_pessoas,sexo_pessoas,peso_pessoas,altura_pessoas,nacionalidade_pessoas)values('Lucas','1984-08-02','M','78.5','1.83','Brasil'),('Maria','1999-12-10','F','55','1.59','Italia'),('João','2001-07-26','M','84.6','1.90',default);
+
+
+/*Exibindo os dados adicionados*/
+select * from tb_pessoas;
+
+
+/*exibindo informacoes da tabela*/
+desc tb_pessoas;
+
+
+/*adicionado uma coluna na tabela*/
+alter table tb_pessoas
+add column profissao varchar(10);
+
+
+/*removendo a coluna da tabela*/
+alter table tb_pessoas
+drop column profissao;
+
+
+/*adicionado uma coluna na tabela em uma posicao escolhida DEPOIS de alguma coluna (after)*/
+alter table tb_pessoas
+add column profissao_pessoas varchar(10) after nome_pessoas;
+
+
+/*adicionado uma coluna na tabela em uma posicao escolhida ANTES de alguma coluna (first)*/
+alter table tb_pessoas
+add column codigo_pessoas int first;
+
+
+/*alterando um valor de uma coluna*/
+alter table tb_pessoas
+modify column profissao_pessoas varchar(20);
+
+
+/*alterando o nome da coluna*/
+/*change column nomeAtualDaColuna novoNomeDaColuna configuracoes da coluna*/
+alter table tb_pessoas
+change column profissao_pessoas profissao_pessoasNovo varchar(20);
+
+
+/*alterando o nome da tabela*/
+alter table tb_pessoas
+rename to tb_gafanhotos;
+
+
+/*exemplo3 - criando tabela tb_cursos*/
+create table tb_cursos(
+nome_cursos varchar(30) not null,
+descricao_cursos text,
+carga_cursos int unsigned,
+totalAulas_cursos int unsigned,
+ano_cursos year default '2016'
+) default charset=utf8;
+
+
+/*adicionado uma coluna na tabela em uma posicao escolhida ANTES de alguma coluna (first)*/
+alter table tb_cursos
+add column id_cursos int first;
+
+
+/*adicionando a chave primaria*/
+alter table tb_cursos
+add primary key(id_cursos);
+
+
+/*inserindo valores na tabela tb_cursos diretamante*/
+insert into tb_cursos value
+('1','HTML4','Curso de HTML5','40','37','2014'),
+('2','Algoritmos','Lógica de Programação','20','15','2014'),
+('3','Photoshop','Dicas de Photoshop CC','10','8','2014'),
+('4','PGP','Curso de PHP para iniciantes','40','20','2010'),
+('5','Jarva','Introdução à Linguagem Dava','10','29','2000'),
+('6','MySQL','Bancos de Dados MySQL','30','15','2016'),
+('7','Word','Curso completo de Word','40','30','2016'),
+('8','Sapateado','Danças Rítmicas','40','30','2018'),
+('9','Cozinha Árabe','Aprenda a fazer Kibe','40','30','2018'),
+('10','YouTuber','Gerar polêmica e ganhar inscritos','5','2','2018');
+
+
+/*modificando os dados incorretos inseridos*/
+update tb_cursos
+set nome_cursos='HTML5'
+where id_cursos='1';
+
+
+/*modificando dois dados incorretos ao mesmo tempo*/
+update tb_cursos
+set nome_cursos='PHP',ano_cursos='2015'
+where id_cursos='4';
+
+
+/*modificando tres dados incorretos ao mesmo tempo*/
+update tb_cursos
+set nome_cursos='Java',carga_cursos='40',ano_cursos='2015'
+where id_cursos='5'
+limit 1;
+
+
+/*deletando as linhas*/
+delete from tb_cursos
+where id_cursos='8';
+
+
+
+-------------------------------
+/*Excluir o banco de dados*/  |
+drop database bd_teste;       |
+			      |
+/*Escluir uma tabela inteira*/|
+drop table if exists tb_cursos|
+---------------------------------------------
+                                            |
+/*deletando TODAS as linhas de uma tabela*/ |
+truncate table tb_cursos;                   |
+---------------------------------------------
+
+
+
+
+
+____________________________________________________________________________
+
+/*criando a tabela tb_carro com a chave estrangeira*/
+create table tb_carro(
+id_carro int not null auto_increment primary key,
+nome_carro varchar(45) not null,
+placa_carro varchar(7) not null,
+cod_cliente int not null,
+constraint fk_cod_cliente foreign key(cod_cliente) references tb_cliente(id_cliente)
+);
+____________________________________________________________________________
+
+
+
+
+
+____________________________________________________________________________
+
+alter table tb_gafanhotos add column cursoPreferido int;
+
+describe tb_gafanhotos;
+
+alter table tb_gafanhotos
+add foreign key(cursoPreferido)
+references tb_cursos(id_cursos);
+
+select * from tb_gafanhotos;
+select * from tb_cursos;
+
+update tb_gafanhotos set cursoPreferido='6' where id_pessoas='1';
+____________________________________________________________________________

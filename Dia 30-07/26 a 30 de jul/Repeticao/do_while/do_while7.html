@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>do while 7</title>
+	<script language="javascript">
+     /* Faça um programa em JavaScript que solicite 10 números
+	inteiros e exiba 
+	a soma dos pares digitados
+	a soma dos impares digitados
+	digitados - usar do while */   
+   var cont=0, num, somaPar=0, somaImpar=0;
+   do{
+      num=parseInt(window.prompt("Digite um numero inteiro"));
+	  
+	  if(num%2==0)
+	    somaPar= somaPar+num; //acumulando a soma dos pares digitados
+	  else
+	    somaImpar=somaImpar+num;//acumulando a soma dos impares digitados
+   
+   
+   cont++;
+   }while(cont<=9);
+
+    alert("Soma dos pares: "+somaPar +
+	      "Soma dos impares: "+somaImpar);
+  
+   
+  </script>
+</head>
+<body>
+</body>
+</html>

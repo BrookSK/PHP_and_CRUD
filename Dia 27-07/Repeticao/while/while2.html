@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>while 2</title>
+	<script language="javascript">
+
+    /* Faça um programa em JavaScript que solicite 15 
+     números e  exiba 
+•	Os  números maiores que 50
+•	Os números menores que 50
+   usar while*/
+    var n, cont=0, maiores50="", menores50="";
+	
+	while(cont<15){
+
+    n=window.prompt("Digite um numero");
+	n=parseInt(n);
+	
+	if(n>50)
+	  maiores50= maiores50 + "  " + n;  //acumulando os valores maiores que 50
+    else if (n<50)
+	  menores50=menores50 + "  " + n;//acumulando os valores menores que 50
+    
+	cont++;
+    }
+    alert ("Maiores que 50: " + maiores50 +
+	       "\nMenores que 50: " +menores50);
+  
+  
+  </script>
+</head>
+<body>
+</body>
+</html>

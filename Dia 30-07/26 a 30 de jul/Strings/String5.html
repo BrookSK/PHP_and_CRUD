@@ -1,0 +1,29 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>String 5</title>
+	
+
+</head>
+<body>
+   <script language="javascript">
+     /*Programa em JavaScript que solicite uma palavra e 
+	 exibe parte do palavra */
+
+	 var palavra, parte1,parte2 ;
+	  
+	  palavra=window.prompt("Digite uma palavra");
+	  parte1= palavra.slice(0,3); /*vai a partir do indice 0 
+	  até o indice 3 (mas nao inclui o indice 3)*/
+
+	  parte2=palavra.slice(4); /*vai do indice 4 em diante */
+	   
+	  alert ("Palavra digitada "+ palavra+
+			   "\nParte 1 "+ parte1 +
+			   "\nParte 2 "+ parte2);  
+	  
+   </script>
+  
+</body>
+</html>

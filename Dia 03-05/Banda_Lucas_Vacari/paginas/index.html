@@ -1,0 +1,144 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Haikaiss</title>
+	<style type="text/css">
+		#divprincipal{
+  			width: 980px;
+  			position:relative;
+			margin-left: auto; /*Alinhar ao centro a partir da esquerda*/
+			margin-right: auto; /*Alinhar ao centro a partir da direita*/
+			height: 640px;
+  		}
+		
+		#divbanner{
+			width: 100%;
+			height: 95px;
+			background-color:#D67100;
+		}
+		#divmenu{
+			width: 100%;
+			height: 50px;
+			background-color:#2D2D2D;
+		}
+		#divconteudo{
+			width: 100%;
+			height: 400px;
+			background-color:#444543;
+		}
+		#divrodape{
+			width: 100%;
+			height: 90px;
+			background-color:#FAFF41;
+		}
+		/*rótulo menu*/
+		.menu{
+			list-style:none; /*tirar a bolinha do ITEM*/
+			border:0px solid #c0c0c0;/*Tirei a borda daqui*/
+			float:left;
+			margin-left: 23%;
+		}
+		/*formatando itens de menu*/
+		.menu li{
+			position:relative;
+			float:left;
+			border-right:0px solid #c0c0c0; /*Borda a direita do item...entre os itens*/
+		}
+		/* Rótulo do menu em bloco*/
+		.menu li a{
+			color:#ACACAB;
+			text-decoration:none;
+			padding:5px 15px;
+			display:block; /*colocar em bloco*/
+			font-size: 20px;
+		}
+		/* Rótulo menu ao passar o mouse */
+		.menu li a:hover{
+			background:#333;
+			color:#fff;
+			text-shadow:0px 0px 5px #fff; /*sombra no texto*/
+			font-size: 21px;
+		}
+		/*escondendo submenu*/
+		.menu li ul{
+			position:absolute;
+			top:25px;
+			left:0;
+			background-color:#5A5959;
+			display:none; /*esconde sublista*/
+		}
+		/* exibindo submenu*/
+		.menu li:hover ul, .menu li.over ul{
+			display:block;
+		}
+		/* retirando os marcadores das listas */
+		.menu li ul li{
+			border:1px solid #c0c0c0;
+			display:block;
+			width:150px;
+			left: -40px;
+			margin-right: -40px;
+		}
+		body{
+			background-color:#232323;
+		}
+		
+	</style>
+</head>
+
+<body>
+	<div id="divprincipal">
+		<div id="divbanner">
+			
+			<img src="../imagens/topo_lucas.jpg" width="980px" height="95px">
+			
+		</div>
+		
+		<div id="divmenu">
+		<nav>
+			<ul class="menu">
+				<li><a href="index.html">Home</a></li>
+				<li><a href="https://www.revistarap.com.br/tudo-sobre-haikaiss/">Carrira</a></li>
+				<li><a href="#">Álbuns</a>
+					<ul>
+						<li><a href="https://open.spotify.com/album/2sYBOWYCJlcYoFpbpXnr5Q?si=HeY6_V6vSgCBIHfjUnCGsA">Teto Baixo</a></li>
+						<li><a href="https://open.spotify.com/album/1Sv9ms2IZZCIbAeoUS5VPA?si=GPSRldr8RI6FJMaaOxvmnw">Aquário</a></li>
+						<li><a href="https://open.spotify.com/album/5NXJgS9adRvK9mhnAF9XHe?si=OdGp6oi6RUyvuvElGc2lYg">Perfil</a></li>
+					</ul>
+				</li>
+				<li><a href="http://guilhermecedaspyrxrx.blogspot.com/2016/04/como-surgiu-o-damassaclan.html">DMC</a></li>
+				<li><a href="http://webcache.googleusercontent.com/search?q=cache:zSTfsayw4jwJ:www.blitzprodutora.com.br/agenda/70/haikaiss+&cd=3&hl=pt-BR&ct=clnk&gl=br">Turnes</a></li>
+			</ul>
+		</nav>
+			
+		</div>
+		
+		<div id="divconteudo">
+			
+			<center><iframe width="560" height="315" src="https://www.youtube.com/embed/e_xGeZDk3Sw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+			</iframe></center>
+			
+		</div>
+		
+		<div id="divrodape">
+			
+			<img src="../imagens/rodape_lucas.jpg" height="90.9px" usemap="#image-map">
+			
+				<map name="image-map">
+    				<area target="_blank" alt="youtube" title="youtube" href="https://www.youtube.com/user/spvic" coords="651,20,762,70" shape="rect">
+					
+    				<area target="_blank" alt="loja oficial" title="loja oficial" href="http://hkss.iluria.com/index.html" coords="34,16,261,69" shape="rect">
+					
+    				<area target="_blank" alt="spotfy" title="spotfy" href="https://open.spotify.com/artist/53iGNetIf91uZx4Jb54cgb?si=DhzrIZ6nQfG47uyJQf3s7A" coords="776,20,835,71" shape="rect">
+					
+   					<area target="_blank" alt="instagram" title="instagram" href="https://www.instagram.com/haikaiss/?hl=pt" coords="856,18,924,72" shape="rect">
+				</map>
+			
+		</div>
+		
+	</div>
+	
+	
+</body>
+</html>
